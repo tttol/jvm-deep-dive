@@ -1,4 +1,4 @@
-public class CrashDemo {
+public class CrashNative {
     static {
         System.loadLibrary("crash");
     }
@@ -6,6 +6,6 @@ public class CrashDemo {
     private native void causeSegmentationFault();
 
     public static void main(String[] args) {
-        new CrashDemo().causeSegmentationFault();
+        new CrashNative().causeSegmentationFault();
     }
 }

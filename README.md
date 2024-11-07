@@ -1,11 +1,11 @@
 # Step
 ```bash
-$ javac CrashDemo.java
+$ javac CrashNative.java
 
-$ javac -h . CrashDemo.java
+$ javac -h . CrashNative.java
 
 # libcrash.soではなくlibcrash.dylibでoutする
-$ gcc -shared -fpic -o libcrash.dylib -I${JAVA_HOME}/include -I${JAVA_HOME}/include/darwin CrashDemo.c
+$ gcc -shared -fpic -o libcrash.dylib -I${JAVA_HOME}/include -I${JAVA_HOME}/include/darwin CrashNative.c
 
-$ java -Djava.library.path=. CrashDemo
+$ java -Djava.library.path=. CrashNative
 ```
